@@ -9,7 +9,7 @@ we need to modify the following document
 
 /Users/xiaofengzhu/devSource/Python/django-notes-api/venv/lib/python3.9/site-packages/rest_framework_swagger/templates/rest_framework_swagger/index.html
 
-to change from """"{% load staticfiles %}"""" to """"{% load static %}""""
+to change from [{% load staticfiles %}] to [{% load static %}]
 
 
 # The new swagger configuration
