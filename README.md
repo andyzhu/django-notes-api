@@ -17,3 +17,22 @@ Replace the django-rest-swagger with the following
 
 https://github.com/axnsan12/drf-yasg#table-of-contents
 
+# To run Django with Gunicorn
+
+pip install uvicorn
+pip install Gunicorn
+pip install uvloop
+pip install httptools
+
+then edit the urls.py
+
+--- When in development mode and when you are using some other server for local development add this to your url.py
+
+--- from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
+--- # ... the rest of your URLconf goes here ...
+
+--- urlpatterns += staticfiles_urlpatterns()
+
+gunicorn project.asgi:application -k uvicorn.workers.UvicornWorker       
+
